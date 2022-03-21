@@ -3,9 +3,9 @@ name: Pipeline deployment
 on:
   push:
     branches:
-      - test_tag
+      - testing_tag
   pull_request:
-    branches: [test_tag]
+    branches: [testing_tag]
     types: [opened, synchronize]
 
 env:
@@ -90,4 +90,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DEFAULT_BUMP: patch
-          RELEASE_BRANCHES: test_tag
+          RELEASE_BRANCHES: testing_tag
